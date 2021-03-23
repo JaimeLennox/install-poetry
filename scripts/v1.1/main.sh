@@ -33,12 +33,12 @@ echo -e '\n---------------------------------------------------------------------
 
 # Configure Poetry
 if [ "$os" == "Windows" ]; then
-  ln -s "$HOME/.poetry/bin/poetry.bat" "poetry"
-  "$HOME/.poetry/bin/poetry.bat" config virtualenvs.create "$venv_create"
-  "$HOME/.poetry/bin/poetry.bat" config virtualenvs.in-project "$venv_in_project"
-  "$HOME/.poetry/bin/poetry.bat" config virtualenvs.path "$venv_path"
+  ln -s ~/.poetry/bin/poetry.bat "poetry"
+  ~/.poetry/bin/poetry.bat config virtualenvs.create "$venv_create"
+  ~/.poetry/bin/poetry.bat config virtualenvs.in-project "$venv_in_project"
+  ~/.poetry/bin/poetry.bat config virtualenvs.path "$venv_path"
 else
-  source "$HOME"/.poetry/env
+  source ~/.poetry/env
   poetry config virtualenvs.create "$venv_create"
   poetry config virtualenvs.in-project "$venv_in_project"
   poetry config virtualenvs.path "$venv_path"
